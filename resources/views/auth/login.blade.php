@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion — Blog Simple</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="min-h-screen flex items-center justify-center" style="background:#F8F8FF;">
+
+<div class="w-full max-w-md px-4">
+    {{-- Logo --}}
+    <div class="text-center mb-8">
+        <a href="{{ route('home') }}" class="inline-flex items-center gap-2 font-bold text-2xl" style="color:#4A4A8A;">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 3a1 1 0 110 2 1 1 0 010-2zm3 11H9v-2h6v2zm0-4H9v-2h6v2z"/>
+            </svg>
+            Blog Simple
+        </a>
+        <p class="mt-2 text-gray-500 text-sm">Connectez-vous à votre compte</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+        <form method="POST" action="{{ route('login') }}" class="space-y-5">
+            @csrf
+
+            {{-- Email --}}
+            <div>
+                <label class="block text-sm font-medium mb-1.5" style="color:#1A1A2E;">Adresse email</label>
+                <input type="email" name="email" value="{{ old('email') }}" required autofocus
+                       class="w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent {{ $errors->has('email') ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50' }}"
+                       placeholder="vous@exemple.fr">
+                @error('email')
+                    <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            {{-- Password --}}
+            <div>
+                <label class="block text-sm font-medium mb-1.5" style="color:#1A1A2E;">Mot de passe</label>
+                <input type="password" name="password" required
+                       class="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent"
+                       placeholder="••••••••">
+                @error('password')
+                    <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            {{-- Remember --}}
+            <div class="flex items-center gap-2">
+                <input type="checkbox" name="remember" id="remember" class="rounded">
+                <label for="remember" class="text-sm text-gray-600">Se souvenir de moi</label>
+            </div>
+
+            <button type="submit" class="w-full py-3 rounded-xl text-white font-semibold text-sm transition-all hover:opacity-90 active:scale-95" style="background:#4A4A8A;">
+                Se connecter
+            </button>
+        </form>
+
+        <p class="mt-6 text-center text-sm text-gray-500">
+            Pas encore de compte ?
+            <a href="{{ route('register') }}" class="font-semibold hover:underline" style="color:#6C63FF;">S'inscrire</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
