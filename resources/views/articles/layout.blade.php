@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des Articles</title>
@@ -32,7 +33,7 @@
         .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
     </style>
 </head>
-<body>
+<body class="bg-gray-100">
     <nav>
         <h1>📰 Gestion des Articles</h1>
         <a href="/articles">← Retour à la liste</a>
@@ -45,4 +46,3 @@
     </div>
 </body>
 </html>
-
