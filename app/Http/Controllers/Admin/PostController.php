@@ -10,10 +10,32 @@ use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::with(['category', 'comments'])->latest()->paginate(15);
-        return view('admin.posts.index', compact('posts'));
+        $query = Post::with(['category', 'comments', 'user'])->latest();
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', '%' . $search . '%')
+                  ->orWhereHas('user', fn ($u) => $u->where('name', 'like', '%' . $search . '%'));
+            });
+        }
+
+        if ($request->filled('status')) {
+            $request->status === 'published'
+                ? $query->whereNotNull('published_at')
+                : $query->whereNull('published_at');
+        }
+
+        if ($request->filled('category')) {
+            $query->where('category_id', $request->category);
+        }
+
+        $posts      = $query->paginate(15)->withQueryString();
+        $categories = Category::orderBy('name')->get();
+
+        return view('admin.posts.index', compact('posts', 'categories'));
     }
 
     public function create()

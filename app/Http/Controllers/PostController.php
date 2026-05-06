@@ -27,8 +27,9 @@ class PostController extends Controller
         $posts      = $query->latest('published_at')->paginate(8)->withQueryString();
         $categories = Category::withCount(['posts' => fn($q) => $q->whereNotNull('published_at')])->get();
         $recent     = Post::with('user')->whereNotNull('published_at')->latest('published_at')->take(5)->get();
+        $totalPosts = Post::whereNotNull('published_at')->count();
 
-        return view('posts.index', compact('posts', 'categories', 'recent'));
+        return view('posts.index', compact('posts', 'categories', 'recent', 'totalPosts'));
     }
 
     public function show(string $slug)

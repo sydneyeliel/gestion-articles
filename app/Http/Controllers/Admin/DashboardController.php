@@ -18,7 +18,7 @@ class DashboardController extends Controller
             'pending'         => Comment::where('status', 'pending')->count(),
         ];
 
-        $recentPosts = Post::with(['category', 'comments'])
+        $recentPosts = Post::with(['category', 'comments', 'user'])
             ->latest()
             ->take(10)
             ->get();
