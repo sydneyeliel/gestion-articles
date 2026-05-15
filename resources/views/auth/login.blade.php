@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login — Blog Simple</title>
+    <title>Login — NeyDys</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen flex flex-col" style="font-family:'Inter',sans-serif;">
@@ -12,8 +12,8 @@
     <header class="bg-white border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center h-14 gap-8">
-                <a href="{{ route('home') }}" class="font-bold text-xl flex-shrink-0" style="color:#6C63FF;">
-                    Blog Simple
+                <a href="{{ route('home') }}" class="flex-shrink-0">
+                    <img src="{{ asset('images/logo.svg') }}" alt="NeyDys" class="h-14 w-auto">
                 </a>
                 <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-500">
                     <a href="{{ route('home') }}" class="hover:text-gray-900 transition-colors">Explore</a>
@@ -100,13 +100,13 @@
                 </form>
 
                 {{-- Register link --}}
-                <p class="mt-5 text-center text-sm text-gray-500">
+                <p class="mt-8 text-center text-sm text-gray-500">
                     Don't have an account?
                     <a href="{{ route('register') }}" class="font-semibold hover:underline" style="color:#6C63FF;">Get Started</a>
                 </p>
 
                 {{-- Divider --}}
-                <div class="flex items-center gap-3 my-5">
+                <div class="flex items-center gap-3 my-7">
                     <div class="flex-1 h-px bg-gray-200"></div>
                     <span class="text-xs font-medium text-gray-400 tracking-widest">OR SIGN IN WITH</span>
                     <div class="flex-1 h-px bg-gray-200"></div>
@@ -142,8 +142,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                    <a href="{{ route('home') }}" class="font-bold text-sm" style="color:#6C63FF;">Blog Simple</a>
-                    <p class="text-xs text-gray-400 mt-0.5">© {{ date('Y') }} Blog Simple. Designed for thoughtful creators.</p>
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('images/logo.svg') }}" alt="NeyDys" class="h-8 w-auto">
+                    </a>
+                    <p class="text-xs text-gray-400 mt-0.5">© {{ date('Y') }} NeyDys. Designed for thoughtful creators.</p>
                 </div>
                 <nav class="flex flex-wrap gap-5 text-xs text-gray-400">
                     <a href="#" class="hover:text-gray-700 transition-colors">Privacy Policy</a>

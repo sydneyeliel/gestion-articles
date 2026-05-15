@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- TITRE -->
+    <mxCell id="10" value="Diagramme de classes — Blog Laravel"
+      style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="130" y="20" width="900" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- =========================================================
+         USER  (x=30, y=130, w=230, h=200)
+         centre-y = 230 | bottom-y = 330 | top-center = (145,130)
+    ========================================================= -->
+    <mxCell id="20" value="User"
+      style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;"
+      vertex="1" parent="1">
+      <mxGeometry x="30" y="130" width="230" height="200" as="geometry" />
+    </mxCell>
+    <mxCell id="21"
+      value="+ id : int&#xa;+ name : String&#xa;+ email : String&#xa;+ password : String&#xa;+ role : String (user/admin)"
+      style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;"
+      vertex="1" parent="20">
+      <mxGeometry y="30" width="230" height="105" as="geometry" />
+    </mxCell>
+    <mxCell id="22" value=""
+      style="line;strokeColor=#6c8ebf;fillColor=none;"
+      vertex="1" parent="20">
+      <mxGeometry y="135" width="230" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="23"
+      value="+ posts() : Collection&#xa;+ comments() : Collection"
+      style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;"
+      vertex="1" parent="20">
+      <mxGeometry y="143" width="230" height="57" as="geometry" />
+    </mxCell>
+
+    <!-- =========================================================
+         CATEGORY  (x=440, y=145, w=230, h=170)
+         centre-y = 230 | right-center = (670,230)
+    ========================================================= -->
+    <mxCell id="30" value="Category"
+      style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;"
+      vertex="1" parent="1">
+      <mxGeometry x="440" y="145" width="230" height="170" as="geometry" />
+    </mxCell>
+    <mxCell id="31"
+      value="+ id : int&#xa;+ name : String&#xa;+ slug : String"
+      style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;"
+      vertex="1" parent="30">
+      <mxGeometry y="30" width="230" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="32" value=""
+      style="line;strokeColor=#d6b656;fillColor=none;"
+      vertex="1" parent="30">
+      <mxGeometry y="110" width="230" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="33"
+      value="+ posts() : Collection"
+      style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;"
+      vertex="1" parent="30">
+      <mxGeometry y="118" width="230" height="52" as="geometry" />
+    </mxCell>
+
+    <!-- =========================================================
+         POST  (x=820, y=100, w=240, h=260)
+         centre-y = 230 | left-center = (820,230) | bottom-center = (940,360)
+    ========================================================= -->
+    <mxCell id="40" value="Post"
+      style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;"
+      vertex="1" parent="1">
+      <mxGeometry x="820" y="100" width="240" height="260" as="geometry" />
+    </mxCell>
+    <mxCell id="41"
+      value="+ id : int&#xa;+ title : String&#xa;+ slug : String&#xa;+ body : Text&#xa;+ image : String&#xa;+ published_at : DateTime&#xa;+ user_id : int&#xa;+ category_id : int"
+      style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;"
+      vertex="1" parent="40">
+      <mxGeometry y="30" width="240" height="165" as="geometry" />
+    </mxCell>
+    <mxCell id="42" value=""
+      style="line;strokeColor=#82b366;fillColor=none;"
+      vertex="1" parent="40">
+      <mxGeometry y="195" width="240" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="43"
+      value="+ user() : User&#xa;+ category() : Category&#xa;+ comments() : Collection"
+      style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;"
+      vertex="1" parent="40">
+      <mxGeometry y="203" width="240" height="57" as="geometry" />
+    </mxCell>
+
+    <!-- =========================================================
+         COMMENT  (x=440, y=510, w=230, h=230)
+         centre-y = 625 | left-center = (440,625) | right-center = (670,625)
+    ========================================================= -->
+    <mxCell id="50" value="Comment"
+      style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;"
+      vertex="1" parent="1">
+      <mxGeometry x="440" y="510" width="230" height="230" as="geometry" />
+    </mxCell>
+    <mxCell id="51"
+      value="+ id : int&#xa;+ body : Text&#xa;+ status : String (pending/approved)&#xa;+ user_id : int&#xa;+ post_id : int&#xa;+ created_at : DateTime"
+      style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;"
+      vertex="1" parent="50">
+      <mxGeometry y="30" width="230" height="130" as="geometry" />
+    </mxCell>
+    <mxCell id="52" value=""
+      style="line;strokeColor=#9673a6;fillColor=none;"
+      vertex="1" parent="50">
+      <mxGeometry y="160" width="230" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="53"
+      value="+ user() : User&#xa;+ post() : Post"
+      style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;overflow=hidden;"
+      vertex="1" parent="50">
+      <mxGeometry y="168" width="230" height="62" as="geometry" />
+    </mxCell>
+
+    <!-- =============================================================
+         RELATIONS
+         Légende des couleurs :
+           écrit    → bleu foncé  #1565C0
+           contient → orange      #E65100
+           poste    → vert        #2E7D32
+           possède  → violet      #6A1B9A
+    ============================================================= -->
+
+    <!-- ── ÉCRIT : User (1) ──────────────> Post (0..*) ──────────────
+         Route en U par le dessus des classes (y = 60)
+         exit top-center User (145,130) → (145,60) → (940,60) → top-center Post (940,100)
+    -->
+    <mxCell id="60" value="écrit"
+      style="endArrow=open;endFill=0;endSize=14;startArrow=none;
+             strokeWidth=4;strokeColor=#1565C0;
+             fontStyle=1;fontSize=13;labelBackgroundColor=#ffffff;
+             rounded=1;
+             exitX=0.5;exitY=0;exitDx=0;exitDy=0;
+             entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+      edge="1" source="20" target="40" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="145" y="62" />
+          <mxPoint x="940" y="62" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- multiplicités écrit -->
+    <mxCell id="61" value="1"
+      style="resizable=0;html=1;align=left;verticalAlign=bottom;
+             labelBackgroundColor=#dae8fc;labelBorderColor=#1565C0;
+             fontSize=13;fontStyle=1;strokeColor=none;fillColor=none;"
+      connectable="0" vertex="1" parent="60">
+      <mxGeometry x="-0.85" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="62" value="0..*"
+      style="resizable=0;html=1;align=right;verticalAlign=bottom;
+             labelBackgroundColor=#d5e8d4;labelBorderColor=#1565C0;
+             fontSize=13;fontStyle=1;strokeColor=none;fillColor=none;"
+      connectable="0" vertex="1" parent="60">
+      <mxGeometry x="0.85" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ── CONTIENT : Category (1) ──────> Post (0..*) ──────────────
+         Ligne directe horizontale (même centre-y = 230)
+         exit right-center Category (670,230) → left-center Post (820,230)
+    -->
+    <mxCell id="63" value="contient"
+      style="endArrow=open;endFill=0;endSize=14;startArrow=none;
+             strokeWidth=4;strokeColor=#E65100;
+             fontStyle=1;fontSize=13;labelBackgroundColor=#ffffff;
+             rounded=0;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="30" target="40" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <!-- multiplicités contient -->
+    <mxCell id="64" value="1"
+      style="resizable=0;html=1;align=left;verticalAlign=bottom;
+             labelBackgroundColor=#fff2cc;labelBorderColor=#E65100;
+             fontSize=13;fontStyle=1;strokeColor=none;fillColor=none;"
+      connectable="0" vertex="1" parent="63">
+      <mxGeometry x="-0.85" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="65" value="0..*"
+      style="resizable=0;html=1;align=right;verticalAlign=bottom;
+             labelBackgroundColor=#d5e8d4;labelBorderColor=#E65100;
+             fontSize=13;fontStyle=1;strokeColor=none;fillColor=none;"
+      connectable="0" vertex="1" parent="63">
+      <mxGeometry x="0.85" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ── POSTE : User (1) ─────────────> Comment (0..*) ───────────
+         Chemin en L : bas de User → descend → entre par la gauche de Comment
+         exit bottom-center User (145,330) → (145,625) → left-center Comment (440,625)
+    -->
+    <mxCell id="66" value="poste"
+      style="endArrow=open;endFill=0;endSize=14;startArrow=none;
+             strokeWidth=4;strokeColor=#2E7D32;
+             fontStyle=1;fontSize=13;labelBackgroundColor=#ffffff;
+             rounded=1;
+             exitX=0.5;exitY=1;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="20" target="50" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="145" y="625" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- multiplicités poste -->
+    <mxCell id="67" value="1"
+      style="resizable=0;html=1;align=left;verticalAlign=bottom;
+             labelBackgroundColor=#dae8fc;labelBorderColor=#2E7D32;
+             fontSize=13;fontStyle=1;strokeColor=none;fillColor=none;"
+      connectable="0" vertex="1" parent="66">
+      <mxGeometry x="-0.85" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="68" value="0..*"
+      style="resizable=0;html=1;align=right;verticalAlign=bottom;
+             labelBackgroundColor=#e1d5e7;labelBorderColor=#2E7D32;
+             fontSize=13;fontStyle=1;strokeColor=none;fillColor=none;"
+      connectable="0" vertex="1" parent="66">
+      <mxGeometry x="0.85" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ── POSSÈDE : Post (1) ───────────> Comment (0..*) ───────────
+         Chemin en L : bas de Post → descend → entre par la droite de Comment
+         exit bottom-center Post (940,360) → (940,625) → right-center Comment (670,625)
+    -->
+    <mxCell id="69" value="possède"
+      style="endArrow=open;endFill=0;endSize=14;startArrow=none;
+             strokeWidth=4;strokeColor=#6A1B9A;
+             fontStyle=1;fontSize=13;labelBackgroundColor=#ffffff;
+             rounded=1;
+             exitX=0.5;exitY=1;exitDx=0;exitDy=0;
+             entryX=1;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="40" target="50" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="940" y="625" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- multiplicités possède -->
+    <mxCell id="70" value="1"
+      style="resizable=0;html=1;align=left;verticalAlign=bottom;
+             labelBackgroundColor=#d5e8d4;labelBorderColor=#6A1B9A;
+             fontSize=13;fontStyle=1;strokeColor=none;fillColor=none;"
+      connectable="0" vertex="1" parent="69">
+      <mxGeometry x="-0.85" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="71" value="0..*"
+      style="resizable=0;html=1;align=right;verticalAlign=bottom;
+             labelBackgroundColor=#e1d5e7;labelBorderColor=#6A1B9A;
+             fontSize=13;fontStyle=1;strokeColor=none;fillColor=none;"
+      connectable="0" vertex="1" parent="69">
+      <mxGeometry x="0.85" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

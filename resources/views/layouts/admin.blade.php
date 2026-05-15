@@ -21,7 +21,7 @@
                 </svg>
             </div>
             <div>
-                <p class="text-white font-bold text-sm leading-tight">Blog Simple</p>
+                <img src="{{ asset('images/logo.svg') }}" alt="NeyDys" class="h-7 w-auto brightness-0 invert">
                 <p class="text-xs font-medium tracking-widest" style="color:#6C63FF;font-size:9px;">MANAGEMENT</p>
             </div>
         </a>

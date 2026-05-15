@@ -1,0 +1,295 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ====== TITRE ====== -->
+    <mxCell id="title" value="Diagramme de séquence — Poster un commentaire"
+      style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="80" y="15" width="920" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- ====== PARTICIPANTS ====== -->
+
+    <!-- Utilisateur — bonhomme bâton (tête + corps + bras + jambes + label) -->
+    <!-- Tête -->
+    <mxCell id="p1_head" value=""
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;"
+      vertex="1" parent="1">
+      <mxGeometry x="80" y="55" width="30" height="30" as="geometry" />
+    </mxCell>
+    <!-- Corps -->
+    <mxCell id="p1_body" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="95" y="85" as="sourcePoint"/>
+        <mxPoint x="95" y="115" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <!-- Bras -->
+    <mxCell id="p1_arms" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="73" y="100" as="sourcePoint"/>
+        <mxPoint x="117" y="100" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <!-- Jambe gauche -->
+    <mxCell id="p1_legl" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="95" y="115" as="sourcePoint"/>
+        <mxPoint x="75" y="140" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <!-- Jambe droite -->
+    <mxCell id="p1_legr" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="95" y="115" as="sourcePoint"/>
+        <mxPoint x="115" y="140" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Navigateur — boîte -->
+    <mxCell id="p2" value="&lt;u&gt;Navigateur&lt;/u&gt;"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;"
+      vertex="1" parent="1">
+      <mxGeometry x="195" y="70" width="110" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Middleware Auth — boîte -->
+    <mxCell id="p3" value="&lt;u&gt;Middleware Auth&lt;/u&gt;"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;"
+      vertex="1" parent="1">
+      <mxGeometry x="375" y="70" width="130" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- CommentController — boîte -->
+    <mxCell id="p4" value="&lt;u&gt;CommentController&lt;/u&gt;"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;"
+      vertex="1" parent="1">
+      <mxGeometry x="565" y="70" width="140" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Base de données — boîte -->
+    <mxCell id="p5" value="&lt;u&gt;Base de données&lt;/u&gt;"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;"
+      vertex="1" parent="1">
+      <mxGeometry x="760" y="70" width="120" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ====== LIGNES DE VIE (tiretées, dessinées avant les boîtes d'activation) ====== -->
+
+    <!-- Utilisateur lifeline -->
+    <mxCell id="l1" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="95" y="130" as="sourcePoint"/>
+        <mxPoint x="95" y="760" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Navigateur lifeline -->
+    <mxCell id="l2" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="250" y="110" as="sourcePoint"/>
+        <mxPoint x="250" y="760" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Middleware Auth lifeline -->
+    <mxCell id="l3" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="440" y="110" as="sourcePoint"/>
+        <mxPoint x="440" y="760" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- CommentController lifeline -->
+    <mxCell id="l4" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="635" y="110" as="sourcePoint"/>
+        <mxPoint x="635" y="760" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Base de données lifeline -->
+    <mxCell id="l5" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="820" y="110" as="sourcePoint"/>
+        <mxPoint x="820" y="760" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ====== BOÎTES D'ACTIVATION (barres grises sur les lignes de vie) ====== -->
+
+    <!-- Utilisateur activation -->
+    <mxCell id="a1" value=""
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3b3b3;strokeColor=#808080;"
+      vertex="1" parent="1">
+      <mxGeometry x="87" y="160" width="16" height="565" as="geometry" />
+    </mxCell>
+
+    <!-- Navigateur activation -->
+    <mxCell id="a2" value=""
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3b3b3;strokeColor=#808080;"
+      vertex="1" parent="1">
+      <mxGeometry x="242" y="160" width="16" height="580" as="geometry" />
+    </mxCell>
+
+    <!-- Middleware Auth activation -->
+    <mxCell id="a3" value=""
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3b3b3;strokeColor=#808080;"
+      vertex="1" parent="1">
+      <mxGeometry x="432" y="195" width="16" height="400" as="geometry" />
+    </mxCell>
+
+    <!-- CommentController activation -->
+    <mxCell id="a4" value=""
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3b3b3;strokeColor=#808080;"
+      vertex="1" parent="1">
+      <mxGeometry x="627" y="435" width="16" height="235" as="geometry" />
+    </mxCell>
+
+    <!-- Base de données activation -->
+    <mxCell id="a5" value=""
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3b3b3;strokeColor=#808080;"
+      vertex="1" parent="1">
+      <mxGeometry x="812" y="575" width="16" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- ====== MESSAGES ====== -->
+
+    <!-- 1. POST /posts/{id}/comments : Utilisateur → Navigateur -->
+    <mxCell id="m1" value="POST /posts/{id}/comments"
+      style="html=1;fontSize=10;endArrow=block;endFill=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="95" y="170" as="sourcePoint"/>
+        <mxPoint x="242" y="170" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 2. vérifie session : Navigateur → Middleware Auth -->
+    <mxCell id="m2" value="vérifie session"
+      style="html=1;fontSize=10;endArrow=block;endFill=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="258" y="205" as="sourcePoint"/>
+        <mxPoint x="432" y="205" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ====== CADRE ALT : non connecté ====== -->
+    <mxCell id="alt1_frame" value=""
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;"
+      vertex="1" parent="1">
+      <mxGeometry x="65" y="240" width="835" height="145" as="geometry" />
+    </mxCell>
+    <mxCell id="alt1_tag" value="Alt"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="65" y="240" width="30" height="18" as="geometry" />
+    </mxCell>
+    <mxCell id="alt1_cond" value="[non connecté]"
+      style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;"
+      vertex="1" parent="1">
+      <mxGeometry x="103" y="241" width="130" height="16" as="geometry" />
+    </mxCell>
+
+    <!-- 3. Redirect /login : Middleware Auth → Navigateur -->
+    <mxCell id="m3" value="Redirect /login"
+      style="html=1;fontSize=10;endArrow=block;endFill=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="432" y="295" as="sourcePoint"/>
+        <mxPoint x="258" y="295" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 4. redirect vers /login : Navigateur → Utilisateur (retour en tirets) -->
+    <mxCell id="m4" value="redirect vers /login"
+      style="html=1;fontSize=10;endArrow=open;dashed=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="242" y="355" as="sourcePoint"/>
+        <mxPoint x="95" y="355" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 5. store(Request) : Middleware Auth → CommentController -->
+    <mxCell id="m5" value="store(Request)"
+      style="html=1;fontSize=10;endArrow=block;endFill=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="448" y="435" as="sourcePoint"/>
+        <mxPoint x="627" y="435" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ====== CADRE ALT : validation échoue ====== -->
+    <mxCell id="alt2_frame" value=""
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;"
+      vertex="1" parent="1">
+      <mxGeometry x="65" y="460" width="835" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="alt2_tag" value="Alt"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="65" y="460" width="30" height="18" as="geometry" />
+    </mxCell>
+    <mxCell id="alt2_cond" value="[validation échoue]"
+      style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;"
+      vertex="1" parent="1">
+      <mxGeometry x="103" y="461" width="145" height="16" as="geometry" />
+    </mxCell>
+
+    <!-- 6. Retourne erreurs 422 : CommentController → Navigateur (retour en tirets) -->
+    <mxCell id="m6" value="Retourne erreurs 422"
+      style="html=1;fontSize=10;endArrow=open;dashed=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="627" y="510" as="sourcePoint"/>
+        <mxPoint x="258" y="510" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 7. INSERT comment : CommentController → Base de données -->
+    <mxCell id="m7" value="INSERT comment"
+      style="html=1;fontSize=10;endArrow=block;endFill=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="643" y="580" as="sourcePoint"/>
+        <mxPoint x="812" y="580" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 8. comment créé : Base de données → CommentController (retour en tirets) -->
+    <mxCell id="m8" value="comment créé"
+      style="html=1;fontSize=10;endArrow=open;dashed=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="812" y="620" as="sourcePoint"/>
+        <mxPoint x="643" y="620" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 9. Redirect + message succès : CommentController → Navigateur (retour en tirets) -->
+    <mxCell id="m9" value="Redirect + message succès"
+      style="html=1;fontSize=10;endArrow=open;dashed=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="627" y="650" as="sourcePoint"/>
+        <mxPoint x="258" y="650" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 10. Page article + commentaire affiché : Navigateur → Utilisateur (retour en tirets) -->
+    <mxCell id="m10" value="Page article + commentaire affiché"
+      style="html=1;fontSize=10;endArrow=open;dashed=1;"
+      edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="242" y="710" as="sourcePoint"/>
+        <mxPoint x="95" y="710" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
